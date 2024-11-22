@@ -1,7 +1,7 @@
 
 // 部署完成后在网址后面加上这个，获取自建节点和机场聚合节点，/?token=auto或/auto或
 
-let mytoken = 'auto'; //可以随便取，或者uuid生成，https://1024tools.com/uuid
+let mytoken = 'yangshu'; //可以随便取，或者uuid生成，https://1024tools.com/uuid
 let BotToken =''; //可以为空，或者@BotFather中输入/start，/newbot，并关注机器人
 let ChatID =''; //可以为空，或者@userinfobot中获取，/start
 let TG = 0; //小白勿动， 开发者专用，1 为推送所有的访问信息，0 为不推送订阅转换后端的访问信息与异常访问
@@ -12,8 +12,20 @@ let timestamp = 4102329600000;//2099-12-31
 
 //节点链接 + 订阅链接
 let MainData = `
-vless://b7a392e2-4ef0-4496-90bc-1c37bb234904@cf.090227.xyz:443?encryption=none&security=tls&sni=edgetunnel-2z2.pages.dev&fp=random&type=ws&host=edgetunnel-2z2.pages.dev&path=%2F%3Fed%3D2048#%E5%8A%A0%E5%85%A5%E6%88%91%E7%9A%84%E9%A2%91%E9%81%93t.me%2FCMLiussss%E8%A7%A3%E9%94%81%E6%9B%B4%E5%A4%9A%E4%BC%98%E9%80%89%E8%8A%82%E7%82%B9
-https://sub.xf.free.hr/auto
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@bpb-worker-panel-6vv.pages.dev:443?encryption=none&security=tls&sni=bpb-WORkeR-PAnEl-6Vv.paGes.dEv&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FRW5RmkXVjrQNxXmJ%3Fed%3D2560#%F0%9F%92%A6%201%20-%20VLESS%20-%20Domain%20%3A%20443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@www.speedtest.net:443?encryption=none&security=tls&sni=BPb-wOrkER-PANeL-6Vv.pAGes.dEv&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FLyamBTvOoQ1IkID3%3Fed%3D2560#%F0%9F%92%A6%202%20-%20VLESS%20-%20Domain%20%3A%20443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@172.66.44.249:443?encryption=none&security=tls&sni=BPb-worKEr-PANEl-6vv.PAGEs.dEV&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FHf4mnbDJ5xWrGFbN%3Fed%3D2560#%F0%9F%92%A6%203%20-%20VLESS%20-%20IPv4%20%3A%20443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@172.66.47.7:443?encryption=none&security=tls&sni=bPb-woRkeR-pAnEL-6Vv.PaGes.DEV&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FThYBBlc18C18YEp0%3Fed%3D2560#%F0%9F%92%A6%204%20-%20VLESS%20-%20IPv4%20%3A%20443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@[2606:4700:310c::ac42:2f07]:443?encryption=none&security=tls&sni=bPB-WoRkER-PaNEl-6Vv.PaGeS.dev&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FZGeo9KBnjQD4GF1N%3Fed%3D2560#%F0%9F%92%A6%205%20-%20VLESS%20-%20IPv6%20%3A%20443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@[2606:4700:310c::ac42:2cf9]:443?encryption=none&security=tls&sni=bPB-workER-PaneL-6vV.PAgeS.dEv&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2F9RYczHoiurAJf1F7%3Fed%3D2560#%F0%9F%92%A6%206%20-%20VLESS%20-%20IPv6%20%3A%20443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@103.160.204.5:443?encryption=none&security=tls&sni=BpB-wOrkEr-paNel-6VV.PAgEs.dEv&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FUQAV7eFy9BoVT2lT%3Fed%3D2560#%F0%9F%92%A6%207%20-%20VLESS%20-%20Clean%20IP%20%3A%20443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@bpb-worker-panel-6vv.pages.dev:8443?encryption=none&security=tls&sni=bPb-WoRKeR-paNEl-6VV.PAgES.dEv&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FSwkmvdOhTbFoMAG9%3Fed%3D2560#%F0%9F%92%A6%208%20-%20VLESS%20-%20Domain%20%3A%208443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@www.speedtest.net:8443?encryption=none&security=tls&sni=Bpb-woRkER-PANeL-6vV.Pages.Dev&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FKORbc6wDPIFD6Led%3Fed%3D2560#%F0%9F%92%A6%209%20-%20VLESS%20-%20Domain%20%3A%208443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@172.66.44.249:8443?encryption=none&security=tls&sni=BpB-wOrkEr-panEL-6vV.PAGeS.dEv&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FSdTpU4vG1EzdtAPf%3Fed%3D2560#%F0%9F%92%A6%2010%20-%20VLESS%20-%20IPv4%20%3A%208443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@172.66.47.7:8443?encryption=none&security=tls&sni=bpb-WOrkeR-PAneL-6Vv.PagEs.deV&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FN9T6U5eygiuuNEov%3Fed%3D2560#%F0%9F%92%A6%2011%20-%20VLESS%20-%20IPv4%20%3A%208443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@[2606:4700:310c::ac42:2f07]:8443?encryption=none&security=tls&sni=BpB-WoRKER-PANeL-6VV.PaGes.dEV&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FHJJYHdxDGb74wLq0%3Fed%3D2560#%F0%9F%92%A6%2012%20-%20VLESS%20-%20IPv6%20%3A%208443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@[2606:4700:310c::ac42:2cf9]:8443?encryption=none&security=tls&sni=Bpb-WorKer-PanEL-6Vv.pAgES.DeV&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FxZaOBmPvVw0yCoRg%3Fed%3D2560#%F0%9F%92%A6%2013%20-%20VLESS%20-%20IPv6%20%3A%208443
+vless://ea7f49db-9578-4689-aaec-5f1b6c2a8938@103.160.204.5:8443?encryption=none&security=tls&sni=bPb-wORKer-paNEl-6vV.pagEs.deV&alpn=h2%2Chttp%2F1.1&fp=randomized&type=ws&host=bpb-worker-panel-6vv.pages.dev&path=%2FVWZhCc3vNsDYHiSi%3Fed%3D2560#%F0%9F%92%A6%2014%20-%20VLESS%20-%20Clean%20IP%20%3A%208443
 `
 
 let urls = [];
